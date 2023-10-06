@@ -1,0 +1,58 @@
+/*------------------this is for logo section or header section--------------*/
+.logo-container {
+  text-align: center; 
+  padding: 10px 0;  
+}
+
+.logo {
+  max-width: 100%; /* Limiting the width of the logo, you can adjust this */
+  height: 145px; /* This maintains the aspect ratio of the image */
+}
+
+
+/* -------------this is for nav bar-----------------*/
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 10px;
+  background-color: #333;
+  font-size: large;
+}
+
+.nav-links a, .hamburger-icon {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger-menu {
+  position: relative; 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #333;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #575757;
+}
+
+.hamburger-icon:hover {
+  cursor: pointer;
+}
