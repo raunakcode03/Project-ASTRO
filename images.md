@@ -1,0 +1,15 @@
+# Project-ASTRO
+
+![pisces](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/a2639dea-4bdf-4b2b-9ceb-adf70e823582)
+![mainlogo](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/849e3c6b-b0d3-4f21-a1fd-3a499a817c46)
+![libra](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/9dd99562-3f15-479d-a309-5b818c56e66e)
+![leo](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/31c36f66-10db-4de7-ba12-6b5e8df3b854)
+![gemini](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/32e1620a-31bb-468a-a1c3-a3fb64069334)
+![capricorn](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/58016899-c7b3-450e-9b9b-75d50fb1df33)
+![cancer](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/27310b8f-4d9b-4c9c-9467-6b21103a9da3)
+![aries](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/e0d66f5f-dcb9-4d5b-9c46-172aed7d90be)
+![aquarius](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/1e4a09ae-07a8-4974-9a01-6d6866565a9c)
+![virgo](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/7e1a936b-4086-46f4-b287-b3f24eacf94d)
+![taurus](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/5863b14d-7363-4e05-9b85-12398ddebb44)
+![scorpio](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/ed721c09-fc9b-4196-a5c2-bfd469f827af)
+![sagittarius](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/56c6091b-15fe-4109-b631-38191568a072)
