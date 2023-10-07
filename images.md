@@ -14,4 +14,3 @@
 ![taurus](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/5863b14d-7363-4e05-9b85-12398ddebb44)
 ![scorpio](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/ed721c09-fc9b-4196-a5c2-bfd469f827af)
 ![sagittarius](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/56c6091b-15fe-4109-b631-38191568a072)
-![Horoscope_LOGO](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/7b08c5af-552a-4920-8f19-76fa27348516)
