@@ -1,6 +1,7 @@
 # Project-ASTRO
 
-![pisces](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/a2639dea-4bdf-4b2b-9ceb-adf70e823582)
+![pisces](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/a2639dea-4bdf-4b2b-9ceb-adf70e823582)![mic](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/8d542504-7d24-4e52-a47a-1fade5c48e7a)
+
 ![mainlogo](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/849e3c6b-b0d3-4f21-a1fd-3a499a817c46)
 ![libra](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/9dd99562-3f15-479d-a309-5b818c56e66e)
 ![leo](https://github.com/Copiedsimle/Project-ASTRO/assets/106765124/31c36f66-10db-4de7-ba12-6b5e8df3b854)
