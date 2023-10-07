@@ -63,6 +63,16 @@ body {
   justify-content: center;
   padding: 20px 0;
   background: linear-gradient(45deg, #f9f9f9, #e6e6e6); /* Gradient background */
+  text-align: center;
+}
+
+.horoscope-section h1{
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+  font-size: 39px;
 }
 
 .zodiac-sign {
@@ -101,3 +111,28 @@ body {
 .zodiac-sign:hover a {
   color: #0077cc; /* Change text color on hover */
 }
+
+/* ***********************hrlogo************************** */
+.hr-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.custom-hr {
+    flex-grow: 1;                  /* Allow the hr to grow and occupy the space */
+    border: 0;                     
+    height: 3px;
+    background-image: linear-gradient(90deg, #0077cc, #f9f9f9, #0077cc);
+    margin: 0 10px;               /* Space between hr and logo */
+}
+
+.hr-logo {
+    width: 40px;                  /* Adjust based on your logo's desired size */
+    height: auto;
+    position: relative;
+    z-index: 1;                   /* Bring logo to front */
+}
+
