@@ -56,8 +56,8 @@ body {
   cursor: pointer;
 }
 
-/* ---------------Going to work on Horoscopes area-------------------*/
-.horoscope-section {
+/* ---------------Going to work on Horoscopes/Numerology/love area-------------------*/
+.horoscope-section, .numerology-section, .love-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -66,7 +66,7 @@ body {
   text-align: center;
 }
 
-.horoscope-section h1{
+.horoscope-section h1, .numerology-section h1, .love-section h1{
   width: 100%;
   margin-bottom: 20px;
   font-size: 24px;
@@ -75,13 +75,13 @@ body {
   font-size: 39px;
 }
 
-.zodiac-sign {
+.zodiac-sign, .numero-sign, .love-sign {
   margin: 15px;
   text-align: center;
   transition: transform 0.3s; /* Smooth transform transition for hover effect */
 }
 
-.zodiac-sign img {
+.zodiac-sign img, .numero-sign img, .love-sign img {
   max-width: 60px;
   height: auto;
   margin-bottom: 10px;
@@ -90,7 +90,7 @@ body {
   transition: all 0.3s; /* Smooth transition for hover effect */
 }
 
-.zodiac-sign a {
+.zodiac-sign a, .numero-sign a, .love-sign a {
   display: block;
   text-decoration: none;
   color: #333;
@@ -100,15 +100,15 @@ body {
 }
 
 /* Hover effects */
-.zodiac-sign:hover {
+.zodiac-sign:hover, .numero-sign:hover, .love-sign:hover {
   transform: scale(1.1); /* Scale up zodiac sign container on hover */
 }
 
-.zodiac-sign:hover img {
+.zodiac-sign:hover img, .numero-sign:hover img, .love-sign:hover img {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
 }
 
-.zodiac-sign:hover a {
+.zodiac-sign:hover a, .numero-sign:hover a, .love-sign:hover a {
   color: #0077cc; /* Change text color on hover */
 }
 
@@ -136,3 +136,41 @@ body {
     z-index: 1;                   /* Bring logo to front */
 }
 
+/* ***********************tarot************************** */
+
+.tarot-sign {
+  margin: 15px;
+  text-align: center;
+  transition: transform 0.5s; /* Smooth transform transition for hover effect */
+}
+
+.tarot-sign img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 1px;
+  border-radius: 10%; /* Rounded icons */
+  box-shadow: 10px 10px 100px rgba(228, 13, 13, 0.1); /* Shadow for depth */
+  transition: all 0.3s; /* Smooth transition for hover effect */
+}
+
+.tarot-sign a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500; /* Slightly bolder text */
+  transition: color 0.3s; /* Smooth color transition for hover effect */
+  padding: 5px 0;
+}
+
+/* Hover effects */
+.tarot-sign:hover {
+  transform: scale(1.1); /* Scale up zodiac sign container on hover */
+}
+
+.tarot-sign:hover img {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+}
+
+.tarot-sign:hover a {
+  color: #0077cc; /* Change text color on hover */
+}
