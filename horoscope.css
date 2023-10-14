@@ -1,0 +1,151 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+section {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Flexbox for larger screens */
+@media (min-width: 768px) {
+    .horoscope-section, .find-zodiac-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .horoscope-section > *, .find-zodiac-section > * {
+        flex: 0 0 calc(48% - 1rem);
+    }
+}
+
+#horoscope-section {
+    background-color: #f7f8fc;   /* A light background color for the entire section */
+    padding: 20px;               /* Spacing inside the section */
+    border-radius: 8px;          /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* A subtle shadow */
+    max-width: 600px;            /* Maximum width, but you can adjust as needed */
+    margin: 20px auto;           /* Centering the box if placed within a larger container */
+}
+
+#horoscopeMessage {
+    font-size: 18px;              /* Adjust the font size */
+    line-height: 1.5;             /* Improve readability */
+    color: #333;                  /* Darker font color */
+    border-left: 4px solid #ff4500; /* A left-border highlight for emphasis */
+    padding-left: 15px;           /* Spacing after the left border */
+}
+
+.zodiac-content{
+    display: none;
+}
+
+/*fotter*/
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-container p {
+    margin: 0;
+}
+
+.footer-container ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px; /* Provides spacing between list items */
+}
+
+.footer-container ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-container ul li a:hover {
+    color: #ff4500; /* Color change on hover */
+}
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Centers the social media links */
+}
+
+@media (min-width: 768px) { /* Adjustments for tablets and larger screens */
+    .footer-container {
+        flex-direction: row;
+    }
+
+    .social-links {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1024px) { /* Adjustments for desktop screens */
+    .footer-container ul {
+        gap: 25px; /* Increases the gap between list items for larger screens */
+    }
+}
+Ex
+.social-links a {
+    margin-left: 10px;
+}
+
+.social-links img {
+    width: 24px; /* Size of the social media icons */
+    height: 24px;
+}
+/*-----------------------------------*/
