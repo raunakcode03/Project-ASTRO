@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroAI</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--   --------------extranal link--------------------   -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!--logo of the page in header section-->
+<div class="logo-container">
+  <img src="main_page_images/logo.png" alt="Website Logo" class="logo">
+</div>
+<!------------------------------------------------------------------------------->
+<nav class="navbar">
+    <!-- Hamburger menu -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            &#9776; 
+        </div>
+        <div class="dropdown-content">
+            <a href="horoscope.html">Horoscope</a>
+            <a href="numerology.html">Numerology</a>
+            <a href="#">Tarot</a>
+            <a href="#">Love</a>
+            <a href="#">Festival</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact/Service</a>
+        </div>
+    </div>
+
+    <!-- Other Links -->
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="horoscope.html">Horoscope</a>
+        <a href="#">Love</a>
+        <a href="#">About</a>
+    </div>
+</nav>
+<script src="script.js"></script>
+<!-------------------------------------------------------------------------------->
+
+<div class="slideshow-container">
+    <div class="mySlides fade" style="text-align: center;">
+        <a href="horoscope.html">
+        <img src="main_page_images/horoscope.jpg">
+        </a>
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade" style="text-align: center;">
+        <a href="numerology.html">
+      <img src="main_page_images/numerology.jpg">
+        </a>
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade" style="text-align: center;">
+      <img src="main_page_images/cancer.jpg">
+      <div class="text"></div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+        
+<!-- this the footer-->
+<footer>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="horoscope.html">Horoscopes</a></li>
+        <li><a href="numerology.html">Numerology</a></li>
+        <li><a href="#">Love</a></li>
+        <li><a href="#">Card/Tarot</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+    </ul>
+
+  <p>&copy; 2023 AstroAI. All rights reserved.</p>
+
+</footer>
+
+
+</body>
+</html>

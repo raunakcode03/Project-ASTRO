@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navbar Example</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+            .hidden-content {
+                display: none;
+            }
+
+            h2 {
+                color: #444;
+                border-bottom: 3px solid #fffb00;
+                display: inline-block;
+                padding-bottom: 5px;
+            }
+
+            button {
+                margin-top: 15px;
+                background: linear-gradient(90deg, rgb(255, 208, 0) 0%, rgba(255,154,158,1) 100%);
+                color: #fff;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: all 0.3s;
+                outline: none;
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            }   
+
+            button:hover {
+                background: linear-gradient(90deg, rgb(255, 251, 0) 0%, rgba(255,123,123,1) 100%);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+                transform: translateY(-2px);
+            }
+
+            /* Numerology Section */
+            .numerology-section {
+                background-color: #fff;
+                padding: 30px;
+                margin: 20px 0;
+                border-radius: 10px;
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+                width: 80%;
+                max-width: 500px;
+                text-align: center;
+            }
+
+            input[type="date"] {
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                outline: none;
+                width: 100%;
+                margin-top: 10px;
+                box-sizing: border-box;
+            }
+
+            p {
+                color: #666;
+                font-size: 1.2em;
+                margin-top: 20px;
+            }
+
+            .numerology-content-section {
+                background-color: #eee; /* Slight differentiation for content */
+                padding: 30px;
+                margin: 20px 0;
+                border-radius: 10px;
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+                width: 80%;
+                max-width: 500px;
+                text-align: center;
+            }
+
+            select {
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                margin-top: 10px;
+                outline: none;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!------------------------------------------------------------------------>
+        <div class="logo-container">
+        <img src="main_page_images/logo.png" alt="Website Logo" class="logo">
+        </div>
+
+        <nav class="navbar">
+        <!-- Hamburger menu -->
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                &#9776; 
+            </div>
+            <div class="dropdown-content">
+                <a href=""horoscope.html>Horoscope</a>
+                <a href="#">Numerology</a>
+                <a href="#">Tarot</a>
+                <a href="#">Love</a>
+                <a href="#">Festival</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact/Service</a>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="horoscope.html">Horoscope</a>
+            <a href="#">Love</a>
+            <a href="#">About</a>
+        </div>
+        </nav>
+
+        <script src="script.js"></script>
+        <!------------------------------------------------------------------------>
+        <div class="about-numerology">
+            <p>
+                <strong>Numerology: The Mysterious Power of Numbers <br></strong>
+                Numerology, an ancient belief system that traces its origins to civilizations like Egypt and 
+                Babylonia and was later developed by Pythagoras, attributes profound mystical significance to 
+                numbers and their potential influence on human behavior. Rooted in the idea that numbers 
+                resonate with universal energies, this practice suggests that our names and birthdates can 
+                dictate our life paths, strengths, and even weaknesses. For the susceptible, numerology can 
+                wield a potent influence. A person's name, converted into a numeric value, can supposedly 
+                unveil their innate desires and destiny. Similarly, birth dates determine 'life path' numbers, 
+                providing a roadmap of challenges and opportunities one might face. Yet, while many swear by 
+                its insights, it's essential to approach numerology with caution. Like any tool, when 
+                misapplied or manipulated, it can lead individuals astray. It's always wise to remember that 
+                our choices, more than any number, define our path.
+            </p>
+        </div>
+        <!------------------------------------------------------------------------>
+        <div class="numerology-section">
+            <h2>Find Your Numerology Number</h2>
+            <label for="birthdate-num">Enter your birthdate -></label>
+            <input type="date" id="birthdate-num">
+            <button onclick="findNumerologyNumber()">Submit</button>
+            <p id="numerology-result"></p>
+        </div>
+        <!------------------------------------------------------------------------>
+
+        <div class="numerology-content-section">
+            <h2>Numerology Insights</h2>
+            <label for="number-select">Select your numerology number:</label>
+            <select id="number-select" onchange="showNumerologyContent()">
+                <option value="0">--Select--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <p id="number-description"></p>
+
+            <div class="hidden-content" data-number="1">
+                <h3>The Power and Prestige of Number 1</h3>
+                <p>
+                    In the realm of numbers, the number 1 stands tall, embodying leadership, independence, 
+                    and determination. It's not by coincidence that in many cultures and contexts, the 
+                    number 1 is synonymous with being the best, the leader, or the primary choice. 
+                    Let's explore its magnificence.
+                </p>
+                <p>
+                    At its core, the number 1 represents initiation and originality. It's the starting point,
+                     the very first step in any sequence. It doesn't follow; it leads. When you think of 
+                     champions, winners, and leaders, it's the number 1 that they proudly wear, signaling 
+                     their unparalleled status.
+                </p>
+                <p>
+                    In numerology, 1 is often associated with leadership qualities such as assertiveness, 
+                    ambition, and the ability to initiate change. It's the number that pushes us to strive, 
+                    innovate, and pioneer. It encourages us to step out of our comfort zones and embark on 
+                    new beginnings.
+                </p>
+                <p>
+                    Moreover, in spiritual contexts, 1 is seen as the primal force from which all other 
+                    numbers spring forth. It's often linked to creation and the singular source of all 
+                    existence.
+                </p>
+                <p>
+                    To be associated with the number 1 is to be associated with strength, individuality, 
+                    and a pioneering spirit. In a world filled with followers, the number 1 challenges 
+                    us all to become leaders in our own right. Whether it's in competition, leadership, 
+                    or personal growth, strive for that coveted position—the power and prestige of 
+                    being number 1.
+                </p>
+            </div>
+            <div class="hidden-content" data-number="1">
+                <h3>The Harmony and Balance of Number 2</h3>
+                <p>
+                    In the vast universe of numbers, the number 2 gracefully dances as a symbol of duality, 
+                    partnership, and harmony. Unlike its predecessor, the assertive number 1, the number 2 
+                    embraces collaboration, balance, and understanding. Dive into the elegance of this number 
+                    and discover its unique significance.
+                </p>
+                <p>
+                    At its essence, the number 2 speaks of relationships. It mirrors the principle of give-and-take, 
+                    the yin and yang, and the delicate dance of balance. Whether in the realm of partnerships or the 
+                    balancing act of life's choices, the number 2 imparts lessons of diplomacy and patience.
+                </p>
+                <p>
+                    Numerologically speaking, 2 resonates with qualities of intuition, sensitivity, and adaptability. 
+                    It whispers of the power that lies in cooperation and the strength discovered in unity. It's a 
+                    gentle reminder that often, two heads are indeed better than one.
+                </p>
+                <p>
+                    Spiritually, 2 is the link between opposites, bridging gaps and building connections. It stands as a 
+                    testament to the fact that opposites not only attract but are necessary for the larger picture 
+                    of balance in the cosmos.
+                </p>
+                <p>
+                    Being associated with the number 2 is to be reminded of the importance of relationships in our lives, 
+                    the need for patience, and the beauty of compromise. In a world where individual success is often 
+                    celebrated, the number 2 brings forth the message that together, we can create something more 
+                    significant, more balanced, and more harmonious. Embrace the gentle power of 2, and discover 
+                    the profound strength that lies in unity and collaboration.
+                </p>
+            </div>
+            <div class="hidden-content" data-number="3">
+                <h3>The Vibrancy and Creativity of Number 3</h3>
+                <p>
+                    Amidst the panorama of numbers, the number 3 shines brightly, bursting with creativity, enthusiasm, 
+                    and expression. It's not merely a number; it's a symbol of expansion, growth, and the power of 
+                    imagination. Let's delve into the radiant world of number 3.
+                </p>
+                <p>
+                    The essence of the number 3 is deeply rooted in creation and communication. If number 1 is the leader 
+                    and number 2 the harmonizer, then number 3 is undoubtedly the storyteller and creator. It's the coming 
+                    together of dualities to produce something new and vibrant, much like the combination of two colors 
+                    to give birth to a third.
+                </p>
+                <p>
+                    In numerology, 3 resonates with the energies of optimism and joy, inspiration, and a keen ability to 
+                    express both verbally and artistically. This number encourages us to tap into our inner muse, to 
+                    communicate our truth, and to seek joy in our endeavors.
+                </p>
+                <p>
+                    Spiritually, the number 3 has significant prominence. Think of the trinities that are central to 
+                    many philosophies and religions: Father, Son, and Holy Spirit in Christianity; Brahma, Vishnu, and 
+                    Shiva in Hinduism; and Birth, Life, and Death in the natural cycle of existence.
+                </p>
+                <p>
+                    Associating with the number 3 is to embrace a life painted in vivid colors, to seek out diverse 
+                    experiences, and to communicate one's truth with passion and flair. In a world that sometimes feels 
+                    monochromatic, the number 3 invites us to add splashes of creativity, joy, and growth to our journey. 
+                    Celebrate the dynamic triad of life, expression, and creation with the exuberant energy of number 3.
+                </p>
+            </div>
+            <div class="hidden-content" data-number="4">
+                <h3>The Stability and Structure of Number 4</h3>
+                <p>
+                    In the spectrum of numbers, the number 4 stands strong and unwavering, symbolizing stability, 
+                    reliability, and a solid foundation. It’s not just another digit; it represents the bedrock 
+                    principles of order, discipline, and dedication. Journey with us into the grounded realm 
+                    of number 4.
+                </p>
+                <p>
+                    At its core, number 4 is about building and structure. Just as the four corners of a square or 
+                    the four cardinal directions provide a sense of completeness and orientation, the number 4 in 
+                    various contexts emphasizes the importance of laying solid ground before reaching for the stars.
+                </p>
+                <p>
+                    In numerology, the essence of 4 vibrates with diligence, responsibility, and the tenacity to achieve 
+                    goals. It encourages individuals to be practical, methodical, and rooted in their pursuits. This number 
+                    reminds us of the beauty of hard work and the rewards that come from persistence and precision.
+                </p>
+                <p>
+                    Spiritually, 4 is seen as the number that brings form and order to our world. Think of the Four Noble 
+                    Truths in Buddhism, the four seasons that structure our year, or the four elements—earth, air, fire, 
+                    water—that have been foundational to ancient philosophies and understanding.
+                </p>
+                <p>
+                    To align with the number 4 is to value the pillars of tradition, routine, and structure. In a world of 
+                    fleeting moments and rapid change, the number 4 beckons us to ground ourselves, to lay strong foundations, 
+                    and to recognize the power of steady progress. Embrace the steadfast energy of number 4, and let it guide 
+                    you in building a life of purpose, stability, and unwavering determination.
+                </p>
+            </div>
+            <div class="hidden-content" data-number="5">
+                <h3>The Dynamic Energy of Number 5</h3>
+                <p>
+                    Amidst the continuum of numbers, the number 5 pulsates with dynamism, representing freedom, adaptability, 
+                    and the spirit of adventure. More than just a figure, it captures the essence of change, exploration, and 
+                    the relentless pursuit of knowledge. Delve into the exhilarating world of number 5.
+                </p>
+                <p>
+                    Centrally placed between numbers 1 and 9, the number 5 symbolizes the midpoint, the fulcrum of balance yet 
+                    also the catalyst of change. It reminds us of the five senses we use to engage with the world, urging us to 
+                    experience life to its fullest.
+                </p>
+                <p>
+                    In numerology, the vibration of 5 is intrinsically linked with curiosity, unpredictability, and versatility. 
+                    This number beckons individuals to break free from confines, to be flexible in the face of change, and to 
+                    embrace diverse experiences. It’s about tasting life's varied flavors and constantly evolving.
+                </p>
+                <p>
+                    Spiritually, the number 5 often signifies the challenge of maintaining balance amidst change. Consider the 
+                    five-pointed star or pentagram, a symbol of balance and protection in many cultures. Or, think of the human 
+                    form, with its five appendage sets – head, arms, and legs, standing as a testament to our adaptability and 
+                    resilience.
+                </p>
+                <p>
+                    To resonate with the number 5 is to dance with change, to seek out new horizons, and to constantly challenge 
+                    one's boundaries. In a world where routine can sometimes bind us, the number 5 is the wild wind that invites 
+                    us to spread our wings, to adapt, and to soar. Celebrate the liberating, ever-changing spirit of number 5, 
+                    and immerse yourself in the infinite possibilities it heralds.
+                </p>
+            </div>
+            <div class="hidden-content" data-number="6">
+                <h3>The Nurturing Essence of Number 6</h3>
+                <p>
+                    Among the symphony of numbers, the number 6 resonates with warmth, care, and the deep currents of 
+                    responsibility and protection. Beyond its numerical identity, it embodies the principles of love, 
+                    harmony, and the home. Let's journey into the heart-centered domain of number 6.
+                </p>
+                <p>
+                    At its foundation, number 6 is often associated with the comfort of the hearth and the sanctuary of home. 
+                    It signifies the loving embrace of family and the protective arms of a caregiver. This number is about unity, 
+                    balance, and the sincere depths of human connection.
+                </p>
+                <p>
+                    In numerology, 6 vibrates with a sense of duty, trustworthiness, and the commitment to justice and truth. 
+                    People linked to this number often exude compassion, understanding, and a natural inclination to nurture 
+                    and aid. It’s a call to step up, take responsibility, and be a beacon of comfort and support for others.
+                </p>
+                <p>
+                    Spiritually, the number 6 often symbolizes the perfect balance between the material and the spiritual, the 
+                    connection between Earth and the divine. The Star of David, a hexagram, is a potent spiritual symbol 
+                    representing this harmony and integration. 
+                </p>
+                <p>
+                    To align with the essence of number 6 is to walk the path of empathy, to create safe havens of love and 
+                    understanding, and to act as guardians for the vulnerable. In a world that can sometimes feel chaotic and 
+                    detached, the number 6 is a gentle reminder of the power of love, responsibility, and the ties that bind us. 
+                    Embrace the nurturing spirit of number 6 and let its harmonious energy guide you in fostering deeper connections 
+                    and building lasting bridges of understanding.
+                </p>
+            </div>
+            <div class="hidden-content" data-number="7">
+                <h3>The Mystic Depth of Number 7</h3>
+                <p>
+                    In the intricate tapestry of numbers, the number 7 emerges as a symbol of introspection, spiritual exploration, 
+                    and profound wisdom. Beyond its arithmetic identity, it delves into the mysteries of existence and our quest for 
+                    deeper understanding. Embark on a journey into the enigmatic realm of number 7.
+                </p>
+                <p>
+                    Historically, the number 7 has been revered across cultures and religions. Consider the seven days of creation, 
+                    the seven wonders of the ancient world, or the seven chakras that align our spiritual energy. This number 
+                    invites us into a world beyond the immediate, encouraging contemplation and inner discovery.
+                </p>
+                <p>
+                    In numerology, the vibration of 7 is intimately tied to introspection, intuition, and the relentless pursuit of 
+                    truth. Those attuned to its frequency are often philosophers at heart, seeking answers to life's biggest questions 
+                    and finding solace in solitude and reflection.
+                </p>
+                <p>
+                    Spiritually, the number 7 stands as a bridge between the earthly and the divine, emphasizing the interconnectedness 
+                    of all things. It reminds us that life's most profound truths often lie beneath the surface, waiting to be uncovered 
+                    by those willing to delve deep.
+                </p>
+                <p>
+                    To resonate with the essence of number 7 is to heed the call of the unknown, to embrace the mysteries of existence, 
+                    and to constantly seek wisdom. In a world driven by outward achievements and distractions, the number 7 beckons us 
+                    inward, urging introspection and the cultivation of inner riches. Embrace the introspective magic of number 7, and 
+                    let it guide you on a path of enlightenment, reflection, and profound understanding.
+                </p>
+            </div>
+            <div class="hidden-content" data-number="8">
+                <h3>The Ambitious Drive of Number 8</h3>
+                <p>
+                    Amid the ensemble of numbers, the number 8 stands with authority, encapsulating the energy of ambition, abundance, 
+                    and the cyclical nature of life and karma. Beyond its numerical facade, it channels the essence of power, balance, 
+                    and the relentless pursuit of success. Dive deep into the authoritative domain of number 8.
+                </p>
+                <p>
+                    Visually, the number 8 is a balanced figure, symmetrical and continuous, reminiscent of the infinity symbol when 
+                    placed on its side. This shape speaks to its nature: endless cycles, perpetual motion, and the delicate balance 
+                    of forces.
+                </p>
+                <p>
+                    In numerology, the vibration of 8 is intrinsically linked to power, business, and material success. It pulsates 
+                    with the drive to achieve, the determination to overcome obstacles, and the promise of abundance. Those resonating 
+                    with its frequency often possess leadership qualities, a keen business sense, and the desire to achieve greatness.
+                </p>
+                <p>
+                    Spiritually, the number 8 is deeply connected to the principle of karma—the idea that what we put out into the 
+                    world, both good and bad, inevitably comes back to us. It serves as a constant reminder of the universe's balance 
+                    and the cyclical nature of life's experiences.
+                </p>
+                <p>
+                    To align with the essence of number 8 is to harness its potent energy, to set goals and chase after them with 
+                    unwavering resolve. In a world where challenges are many and the climb often steep, the number 8 provides the 
+                    momentum, reminding us of our innate power and potential. Embrace the commanding spirit of number 8, and let its 
+                    force propel you towards abundance, balance, and the pinnacle of success.
+                </p>
+            </div>
+            <div class="hidden-content" data-number="9">
+                <h3>The Universal Compassion of Number 9</h3>
+                <p>
+                    Within the numerical orchestra, the number 9 radiates with a sense of culmination, embodying universal love, 
+                    spiritual awakening, and selfless service. Beyond its mathematical identity, it signifies endings and beginnings, 
+                    humanitarianism, and the broader perspective. Step into the enlightening aura of number 9.
+                </p>
+                <p>
+                    Often regarded as the number of cosmic consciousness, the 9 symbolizes a path that has journeyed from 1 through 8, 
+                    accumulating wisdom, experiences, and understanding. It's a number that calls for reflection, introspection, and 
+                    the broader view of life's interconnected tapestry.
+                </p>
+                <p>
+                    In numerology, the 9 vibrates with a universal perspective. It echoes sentiments of global awareness, 
+                    self-sacrifice, and the betterment of humanity. Those attuned to its energy are often old souls, 
+                    carrying the wisdom of lifetimes, drawn to charitable acts and guided by a profound sense of purpose.
+                </p>
+                <p>
+                    Spiritually, the number 9 encapsulates the principles of universal love and the realization that we are all 
+                    intrinsically connected. It prompts us to seek a higher perspective, understanding that our actions ripple out, 
+                    affecting the broader cosmos.
+                </p>
+                <p>
+                    To resonate with the number 9 is to embrace a life of service, recognizing that true fulfillment often lies in 
+                    elevating others. In a world sometimes mired in individualism and isolation, the number 9 shines a beacon of hope, 
+                    compassion, and collective unity. Embrace the expansive warmth of number 9, allowing its luminous energy to guide 
+                    you towards enlightenment, altruism, and the boundless love that binds us all.
+                </p>
+            </div>
+        </div>
+
+        <!--this the footer-->
+        <footer>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Horoscopes</a></li>
+                <li><a href="#">Numerology</a></li>
+                <li><a href="#">Love</a></li>
+                <li><a href="#">Card/Tarot</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p>&copy; 2023 AstroAI. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
