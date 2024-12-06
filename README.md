@@ -1,5 +1,1 @@
-This is just a timepass website and nothing.....
-
-You will know everything abiut it just opening by it. 
-
-Thanks..
+A travel based bog website like tripadviser.in
